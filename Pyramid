@@ -1,0 +1,21 @@
+package work;
+
+public class Pyramid {
+	public static void main(String[] args) {
+		int i,j,k;
+
+		java.util.Scanner s = new java.util.Scanner(System.in);
+		System.out.print("请输入行数:");
+		int n = s.nextInt();
+		for (i = 1; i <= n; i++) {
+			for(j=i;j<n;j++) {
+				System.out.print(" ");
+			}
+			for(k=0;k<i;k++) {
+				System.out.print("*");
+				System.out.print(" ");
+			}
+			System.out.println("\n");
+		}
+	}
+}
