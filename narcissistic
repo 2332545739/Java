@@ -1,0 +1,26 @@
+package work;
+
+public class narcissistic {
+	public static void main(String[] args) {
+		int xhnum;
+		
+		for(int i = 1 ;i < 10000;i++){
+			xhnum = i;
+			int n = 0;
+			while(xhnum != 0){
+				xhnum /= 10;
+				n++;
+			}
+			
+			int a = i/1000;
+			int b = i/100%10;
+			int c = i/10%10;
+			int d = i%10;
+			
+			if(i == Math.pow(a, n) + Math.pow(b, n) + Math.pow(c, n) + Math.pow(d, n)){
+				System.out.println(i + "为水仙花数");
+			}
+		}
+			
+	}
+}
