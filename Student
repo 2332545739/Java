@@ -1,5 +1,7 @@
 package work;
 
+import java.util.Scanner;
+
 public class Student {
 
 	public static void main(String[] args) {
@@ -7,8 +9,23 @@ public class Student {
 		StudentM s0 = new StudentM();
 		StudentM s1 = new StudentM("ZHX", 166, 190);
 		
+		Scanner m = new Scanner(System.in);
+		System.out.print("Input name:");
+		String w = m.next();
+		
+		Scanner n = new Scanner(System.in);
+		System.out.print("Input tell:");
+		int p = n.nextInt();
+		
+		Scanner o = new Scanner(System.in);
+		System.out.print("Input id:");
+		int q = o.nextInt();
+		
+		StudentM s2 = new StudentM(w, p, q);
+		
 		s0.displayStudent();
 		s1.displayStudent();
+		s2.displayStudent();
 	}
 
 }
@@ -23,13 +40,13 @@ public class StudentM {
 	private int tell;
 	private int id;
 	
-	public StudentM(String name,int tell,int id){
+	public am(String name,int tell,int id){
 		this.name = name;
 		this.tell = tell;
 		this.id = id;
 	}
 	
-	public StudentM(){
+	public am(){
 		this.name = "aaa";
 		this.tell = 123;
 		this.id = 123;
