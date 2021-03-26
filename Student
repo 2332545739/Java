@@ -1,0 +1,73 @@
+package work;
+
+public class Student {
+
+	public static void main(String[] args) {
+		
+		StudentM s0 = new StudentM();
+		StudentM s1 = new StudentM("ZHX", 166, 190);
+		
+		s0.displayStudent();
+		s1.displayStudent();
+	}
+
+}
+
+
+
+
+package work;
+
+public class StudentM {
+	private String name;
+	private int tell;
+	private int id;
+	
+	public StudentM(String name,int tell,int id){
+		this.name = name;
+		this.tell = tell;
+		this.id = id;
+	}
+	
+	public StudentM(){
+		this.name = "aaa";
+		this.tell = 123;
+		this.id = 123;
+	}
+	
+	
+	public String getName(){
+		return this.name;
+	}
+	
+	public void setName(String name){
+		this.name = name;
+	}
+	
+	public int getTell(){
+		return this.tell;
+	}
+	
+	public void setTell(int tell){
+		this.tell = tell;
+	}
+	
+	public int getId(){
+		return this.id;
+	}
+	
+	public void setId(int id){
+		this.id = id;
+	}
+	
+	
+	public void displayStudent(){
+		String msg;
+		msg = "name: " + this.name;
+		msg += "\t tell: " + this.tell;
+		msg += "\t id: " + this.id;
+		System.out.print("The student's message:\t");
+		System.out.println(msg);
+	}
+	
+}
