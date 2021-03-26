@@ -1,0 +1,68 @@
+package work;
+
+public class Rectangle {
+	public static void main(String[] args) {
+		RectangleWork r1 = new RectangleWork();
+		RectangleWork r2 = new RectangleWork(2.3f,1.5f);
+		
+		r1.display();
+		System.out.println("Area is :" + r1.area());
+		System.out.println("Perimeter is :" + r1.perimeter());
+		
+		r2.display();
+		System.out.println("Area is :" + r2.area());
+		System.out.println("Perimeter is :" + r2.perimeter());
+		
+	}
+}
+
+
+
+package work;
+
+public class RectangleWork {
+	private float width;
+	private float length;
+	
+	public RectangleWork(float width,float length){
+		this.width = width;
+		this.length = length;
+	}
+	
+	public RectangleWork(){
+		this.width = 1.0f;
+		this.length = 1.0f;
+	}
+	
+	public float getWidth(){
+		return width;
+	}
+	
+	public void setWidth(float width){
+		this.width = width;
+	}
+	
+	public float getLength(){
+		return width;
+	}
+	
+	public void setLength(float length){
+		this.length = length;
+	}
+	
+	public float area(){
+		return this.width * this.length;
+	}
+	
+	public float perimeter(){
+		return (this.width + this.length) * 2;
+	}
+	
+	public void display(){
+		String msg = "";
+		msg = "width = " + this.width + ", length = " + this.length;
+		System.out.println(msg);
+	}
+
+
+}
