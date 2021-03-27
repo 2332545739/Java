@@ -1,0 +1,85 @@
+package week4;
+
+import java.util.Scanner;
+
+public class Address {
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+		
+		AddressWork add0 = new AddressWork();
+		AddressWork add1 = new AddressWork("aa", "bb", "cc", "dd", "ee");
+		
+		add0.displayAddress();
+		add1.displayAddress();
+		
+		System.out.println("Please input the address you want!");
+		
+		Scanner m = new Scanner(System.in);
+		System.out.print("Country:");
+		String co = m.next();
+		
+		Scanner n = new Scanner(System.in);
+		System.out.print("Province:");
+		String pr = n.next();
+		
+		Scanner o = new Scanner(System.in);
+		System.out.print("City:");
+		String ci = o.next();
+		
+		Scanner p = new Scanner(System.in);
+		System.out.print("Street:");
+		String st = p.next();
+		
+		Scanner q = new Scanner(System.in);
+		System.out.print("Postcode:");
+		String po = q.next();
+		
+		AddressWork add2 = new AddressWork(co, pr, ci, st, po);
+		
+		add2.displayAddress();
+		
+	}
+}
+
+
+
+
+package week4;
+
+public class AddressWork {
+	
+	private String country;
+	private String province;
+	private String city;
+	private String street;
+	private String postcode;
+	
+	public AddressWork(){
+		this.country = "a";
+		this.province = "b";
+		this.city = "c";
+		this.street = "d";
+		this.postcode = "e";
+	}
+	
+	public AddressWork(String country, String province, String city, String street, String postcode){
+		this.country = country;
+		this.province = province;
+		this.city = city;
+		this.street = street;
+		this.postcode = postcode;
+	}
+	
+	
+	public void displayAddress(){
+		String msg;
+		msg = this.country + "-country\t";
+		msg += this.province + "-province\t";
+		msg += this.city + "-city\t";
+		msg += this.street + "-street\t";
+		msg += this.postcode + "-postcode\t";
+		System.out.print("The address is : ");
+		System.out.println(msg);
+	}
+}
+
