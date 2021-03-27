@@ -1,0 +1,85 @@
+package week4;
+
+public class Employee {
+
+	public static void main(String[] args) {
+		
+		EmployeeWork emp0 = new EmployeeWork();
+		EmployeeWork emp1 = new EmployeeWork("John", 1002, 2500, 500);
+
+		emp0.displayEmployee();
+		emp1.displayEmployee();
+		
+	}
+
+}
+
+
+
+package week4;
+
+public class EmployeeWork {
+	
+	private String name;
+	private int id;
+	private float baseSalary;
+	private float addSalary;
+	private float sumSalary;
+	
+	public EmployeeWork(){
+		this.name = "aaa";
+		this.id = 111;
+		this.baseSalary = 11111;
+		this.addSalary = 2222;
+		this.sumSalary = this.baseSalary + this.addSalary;
+	}
+	
+	public EmployeeWork(String name, int id, float baseSalary, float addSalary){
+		this.name = name;
+		this.id = id;
+		this.baseSalary = baseSalary;
+		this.addSalary = addSalary;
+		this.sumSalary = this.baseSalary + this.addSalary;
+	}
+	
+	public String getName(){
+		return this.name;
+	}
+	
+	public void setName(String name){
+		this.name = name;
+	}
+	
+	public float getBaseSalary(){
+		return this.baseSalary;
+	}
+	
+	public void setBaseSalary(float baseSalary){
+		this.baseSalary = baseSalary;
+	}
+	
+	public float getaddSalary(){
+		return this.addSalary;
+	}
+	
+	public void setaddSalary(float addSalary){
+		this.addSalary = addSalary;
+	}
+	
+	public float sumSalary(){
+		this.sumSalary = this.baseSalary + this.addSalary;
+		return this.sumSalary;
+	}
+	
+	public void displayEmployee(){
+		String msg;
+		msg = "id:" + this.id;
+		msg += "\t name:" + this.name;
+		msg += "\t baseSalary:" + this.baseSalary;
+		msg += "\t addSalary:" + this.addSalary;
+		msg += "\t sumSalary:" + this.sumSalary;
+		System.out.println(msg);
+	}
+	
+	
+}
